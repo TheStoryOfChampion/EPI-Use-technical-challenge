@@ -82,6 +82,8 @@ This is my attempt at the EPI-USE technical evaluation challenge for the Technic
 - Use login credentials as follows:
     -Staff Number: mbofho47@gmail.com
     -Password: LetAdminIn 
+- <a href="https://eustaffmanager.web.app">Live version </a>
+
 
  ### Backend
 
