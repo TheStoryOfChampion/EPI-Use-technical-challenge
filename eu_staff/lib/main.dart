@@ -1,3 +1,4 @@
+import 'package:eu_staff/Pages/home.dart';
 import 'package:eu_staff/Pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: login(),
+      home: myHome(),
     );
   }
 }
