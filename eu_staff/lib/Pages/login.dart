@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -10,6 +11,23 @@ class login extends StatefulWidget {
 }
 
 class _loginState extends State<login> {
+  final _employeeNumberController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  Future SignIn() async{
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: _employeeNumberController.text.trim(), 
+      password: _passwordController.text.trim(),
+    );
+  }
+
+  @override
+  void dispose(){
+    _employeeNumberController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +67,7 @@ class _loginState extends State<login> {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: TextField(
+                      controller: _employeeNumberController,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Staff Number',
@@ -71,6 +90,7 @@ class _loginState extends State<login> {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0),
                     child: TextField(
+                      controller: _passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
@@ -92,11 +112,14 @@ class _loginState extends State<login> {
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(45),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Sign in',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold
+                  child: GestureDetector(
+                    onTap: SignIn,
+                    child: Center(
+                      child: Text(
+                        'Sign in',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold
+                        ),
                       ),
                     ),
                   ),
