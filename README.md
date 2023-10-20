@@ -92,6 +92,10 @@ This is my attempt at the EPI-USE technical evaluation challenge for the Technic
 ## Other Documents
 
 <p>
-  Below is a set of documents we used in the implementation process. This includes our coding standards, api documentation and brain storming documentation we used to 
-  come up with te initial concept and design.
+  Below is a set of documents I used in the implementation process. This includes my coding standards, technical installation Manual and SRS document.
 </p>
+
+<p align="left">
+      <a href="https://docs.google.com/document/d/1mSOIcdF3GbhQnzImzCB8trRuEELl3aPPclsIAYZY72Y/edit?usp=sharing">SRS Document</a>
+      <a href="https://drive.google.com/drive/folders/1C48Rjn7Eo_8PuVKNkubxDfW8ZaCiqCG4?usp=sharing">Google Drive </a>
+  </p>  
